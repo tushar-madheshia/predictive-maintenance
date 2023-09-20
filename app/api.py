@@ -22,22 +22,16 @@
     
 def score(data):
     from snowflake.snowpark import Session
-    import configparser
-    def get_session():
-        parser = configparser.ConfigParser()
-    # Add the credential file name here
-    parser.read('config.ini')
-
     connection_params = {"user":"REFRACT.FOSFOR@LNTINFOTECH.COM", 
                          "password":"Password321",
                          "account":"fya62509.us-east-1", 
                          "warehouse":"FOSFOR_REFRACT", 
                          "database":"REFRACT_SNOWFLAKE_INTEGRATION",
                          "schema":"SNOWFRACT", 
-                         "role":"A"
+                         "role":"ACCOUNTADMIN"}
 
     session = Session.builder.configs(connection_params).create()
-    return session
+    
 # def score_api():
 
     # return prediction
