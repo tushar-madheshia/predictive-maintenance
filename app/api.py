@@ -21,17 +21,7 @@
 #         return None
     
 def score(data):
-    import cloudpickle 
-    with open("model.pkl", "rb") as f:
-        model = cloudpickle.load(f)
-    print("Model Type : ")
-    print(type(model))
-    pred = model.predict(data)[0]
-    print(pred)
-    if str(pred)=="1":
-        return True
-    elif str(pred)=="0":
-        return False
+    
 # def score_api():
 
     # return prediction
