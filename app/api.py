@@ -28,7 +28,7 @@ def score(data):
     # Add the credential file name here
     parser.read('config.ini')
 
-    connection_params = {user=parser['Credentials']['user'], 
+    connection_params = {"user":"", 
                          password=parser['Credentials']['password'], 
                          account=parser['Credentials']['account'], 
                          warehouse=parser['Credentials']['warehouse'], 
