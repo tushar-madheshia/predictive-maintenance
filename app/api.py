@@ -29,9 +29,9 @@ def score(data):
     parser.read('config.ini')
 
     connection_params = {"user":"REFRACT.FOSFOR@LNTINFOTECH.COM", 
-                         "password":"",
-                         "account":"", 
-                         "warehouse"=parser['Credentials']['warehouse'], 
+                         "password":"Password321",
+                         "account":"fya62509.us-east-1", 
+                         "warehouse":"", 
                          "database"=parser['Credentials']['database'],
                          "schema"=parser['Credentials']['schema'], 
                          "role"=parser['Credentials']['role'])
