@@ -20,7 +20,7 @@
 #         print(ex)
 #         return None
     
-def score(data):
+def score(df):
     from snowflake.snowpark import Session
     connection_params = {"user":"REFRACT.FOSFOR@LNTINFOTECH.COM", 
                          "password":"Password321",
@@ -31,6 +31,7 @@ def score(data):
                          "role":"ACCOUNTADMIN"}
 
     session = Session.builder.configs(connection_params).create()
+    data = list(df.iloc[0])
     
 # def score_api():
 
