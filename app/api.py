@@ -29,10 +29,10 @@ def score(data):
     parser.read('config.ini')
 
     connection_params = {"user":"", 
-                         password=parser['Credentials']['password'], 
-                         account=parser['Credentials']['account'], 
-                         warehouse=parser['Credentials']['warehouse'], 
-                         database=parser['Credentials']['database'],
+                         "password"=parser['Credentials']['password'], 
+                         "account"=parser['Credentials']['account'], 
+                         "warehouse"=parser['Credentials']['warehouse'], 
+                         "database"=parser['Credentials']['database'],
                          schema=parser['Credentials']['schema'], 
                          role=parser['Credentials']['role'])
 
