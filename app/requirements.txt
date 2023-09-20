@@ -3,3 +3,4 @@ pandas
 scikit-learn
 xgboost
 cloudpickle==2.0.0
+snowflake-snowpark-python==1.5.1
