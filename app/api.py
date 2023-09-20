@@ -28,13 +28,13 @@ def score(data):
     # Add the credential file name here
     parser.read('config.ini')
 
-    connection_params = {"user":"", 
-                         "password"=parser['Credentials']['password'], 
-                         "account"=parser['Credentials']['account'], 
+    connection_params = {"user":"REFRACT.FOSFOR@LNTINFOTECH.COM", 
+                         "password":"",
+                         "account":"", 
                          "warehouse"=parser['Credentials']['warehouse'], 
                          "database"=parser['Credentials']['database'],
-                         schema=parser['Credentials']['schema'], 
-                         role=parser['Credentials']['role'])
+                         "schema"=parser['Credentials']['schema'], 
+                         "role"=parser['Credentials']['role'])
 
     session = Session.builder.configs(connection_params).create()
     return session
