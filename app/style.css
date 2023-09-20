@@ -1,0 +1,17 @@
+header{
+    background-color:#00001e !important;
+    background-repeat: no-repeat !important;
+    background-size: 120px 45px !important;
+  }
+.css-fblp2m{
+  background-color:whitesmoke;
+}
+footer {
+  background-color: #d3d3d3;
+  text-align: center;
+  color: #d3d3d3 !important;
+  content: "© 2022" !important;
+}
+footer a {
+  color: #d3d3d3 !important;
+}

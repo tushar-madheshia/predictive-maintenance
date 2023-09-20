@@ -1,0 +1,5 @@
+streamlit
+pandas
+scikit-learn
+xgboost
+cloudpickle==2.0.0
