@@ -20,18 +20,19 @@
 #         print(ex)
 #         return None
     
-def score(data):
-    import cloudpickle 
-    with open("model.pkl", "rb") as f:
-        model = cloudpickle.load(f)
-    print("Model Type : ")
-    print(type(model))
-    pred = model.predict(data)[0]
-    print(pred)
-    if str(pred)=="1":
-        return True
-    elif str(pred)=="0":
-        return False
+def score(df):
+    from snowflake.snowpark import Session
+    connection_params = {"user":"REFRACT.FOSFOR@LNTINFOTECH.COM", 
+                         "password":"Password321",
+                         "account":"fya62509.us-east-1", 
+                         "warehouse":"FOSFOR_REFRACT", 
+                         "database":"REFRACT_SNOWFLAKE_INTEGRATION",
+                         "schema":"SNOWFRACT", 
+                         "role":"ACCOUNTADMIN"}
+
+    session = Session.builder.configs(connection_params).create()
+    data = list(df.iloc[0])
+    
 # def score_api():
 
     # return prediction
