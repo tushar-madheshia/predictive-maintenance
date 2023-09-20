@@ -32,7 +32,10 @@ def score(df):
 
     session = Session.builder.configs(connection_params).create()
     data = list(df.iloc[0])
-    
+    output = session.sql("select PREDICT("+str(data)+")").collect()
+    d = output[0].as_dict()
+    value = list(d.values())[0]
+    return value
 # def score_api():
 
     # return prediction
