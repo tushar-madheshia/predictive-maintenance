@@ -31,10 +31,10 @@ def score(data):
     connection_params = {"user":"REFRACT.FOSFOR@LNTINFOTECH.COM", 
                          "password":"Password321",
                          "account":"fya62509.us-east-1", 
-                         "warehouse":"", 
-                         "database"=parser['Credentials']['database'],
-                         "schema"=parser['Credentials']['schema'], 
-                         "role"=parser['Credentials']['role'])
+                         "warehouse":"FOSFOR_REFRACT", 
+                         "database":"REFRACT_SNOWFLAKE_INTEGRATION",
+                         "schema":"SNOWFRACT", 
+                         "role":"A"
 
     session = Session.builder.configs(connection_params).create()
     return session
